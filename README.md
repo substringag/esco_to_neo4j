@@ -20,27 +20,31 @@ Getting started
 6. Enter and run the following the commands in import_esco_en.cql
 
 7. Play around with the example queries here: 
-
-  // Get all occupations with the word "software developer" in it.
-  match (o:Occupation)
-  where o.preferredLabel contains "software developer"
-  return o;
-
-  // Get all occupations with the word "data scientist" in it.
-  match (o:Occupation)
-  where o.preferredLabel contains "data scientist"
-  return o
-
-  // Get all occupations with the word "data scientist" and "software developer".
-  match (o1:Occupation), (o2:Occupation)
-  where o1.preferredLabel contains "software developer"
-  and o2.preferredLabel contains "data scientist"
-  return o1, o2;
-
-  // Get all essential skills for occupations with "software developer" in the label
-  MATCH (s:Skill)-[:ESSENTIAL_FOR]->(o:Occupation)
-  WHERE o.preferredLabel contains "software developer"
-  return s, o
+```
+// Get all occupations with the word "software developer" in it.
+match (o:Occupation)
+where o.preferredLabel contains "software developer"
+return o;
+```
+```
+// Get all occupations with the word "data scientist" in it.
+match (o:Occupation)
+where o.preferredLabel contains "data scientist"
+return o
+```
+```
+// Get all occupations with the word "data scientist" and "software developer".
+match (o1:Occupation), (o2:Occupation)
+where o1.preferredLabel contains "software developer"
+and o2.preferredLabel contains "data scientist"
+return o1, o2;
+```
+```
+// Get all essential skills for occupations with "software developer" in the label
+MATCH (s:Skill)-[:ESSENTIAL_FOR]->(o:Occupation)
+WHERE o.preferredLabel contains "software developer"
+return s, o
+```
 
 Sources
 ====

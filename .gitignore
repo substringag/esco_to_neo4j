@@ -1,0 +1,14 @@
+vendor/
+/neo4j
+neo4j-community-*/
+neo4j-enterprise-*/
+*.tar.gz
+.env
+*.zip
+.idea/
+!/public/browser/vendor/
+/conf
+/data
+/import
+/logs
+/plugins
